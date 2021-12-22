@@ -19,5 +19,4 @@ steps:
     projectName: 'GithubJsYarnSanity'
     configuration: |
       npm.yarnProject=true
-      npm.yarn.frozenLockfile=true
       npm.runPreStep=true
