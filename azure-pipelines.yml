@@ -10,13 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: docker pull testws/ws4dev:wss-remediate
+  displayName: 'pull docker image'
+- script: docker images
+  displayName: 'list docker images'
 
-- task: WhiteSource@21
-  inputs:
-    cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'GithubJsYarnSanity'
-    configuration: |
-      npm.yarnProject=true
-      npm.runPreStep=true
+#- task: WhiteSource@21
+#  inputs:
+#    cwd: '$(System.DefaultWorkingDirectory)'
+#    projectName: 'GithubJsYarnSanity'
+#    configuration: |
+#      npm.yarnProject=true
+#      npm.runPreStep=true
