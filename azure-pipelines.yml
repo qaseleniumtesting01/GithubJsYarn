@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: docker pull testws/ws4dev:wss-remediate
+- script: docker pull testws/c3034770:latest
   displayName: 'pull docker image'
 - script: docker images
   displayName: 'list docker images'
