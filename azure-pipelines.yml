@@ -10,15 +10,16 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: docker pull testws/c3034770:latest
-  displayName: 'pull docker image'
-- script: docker images
-  displayName: 'list docker images'
+- script: eho Hi World
+  displayName: 'Hi World'
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker Hub'
     command: 'login'
-
+- script: docker pull dockerdevws/wstestdata:C7954602
+  displayName: 'docker pull'
+- script: docker images
+  displayName: 'docker images'
 
 #- task: WhiteSource@21
 #  inputs:
