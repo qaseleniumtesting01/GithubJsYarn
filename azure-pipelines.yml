@@ -12,26 +12,11 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker Hub'
-    command: 'login'
-- script: docker pull dockerdevws/wstestdata:C7954602
-  displayName: 'docker pull'
-- script: docker images
-  displayName: 'docker images'
+
 - task: WhiteSource@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
-    projectName: 'Docker_IMAGE_C7954602'
+    projectName: 'GithubJsYarnSanity'
     configuration: |
-      docker.scanImages=true
-      docker.scanTarFiles=true
-      docker.includes=C7954602
-#- task: WhiteSource@21
-#  inputs:
-#    cwd: '$(System.DefaultWorkingDirectory)'
-#    projectName: 'GithubJsYarnSanity'
-#    configuration: |
-#      npm.yarnProject=true
-#      npm.runPreStep=true
+      npm.yarnProject=true
+      npm.runPreStep=true
