@@ -28,7 +28,6 @@ steps:
       docker.scanImages=true
       docker.scanTarFiles=true
       docker.includes=C7954602
-      scanPackageManager=true
 #- task: WhiteSource@21
 #  inputs:
 #    cwd: '$(System.DefaultWorkingDirectory)'
