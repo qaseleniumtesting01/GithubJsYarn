@@ -20,7 +20,14 @@ steps:
   displayName: 'docker pull'
 - script: docker images
   displayName: 'docker images'
-
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'Docker_IMAGE_C7954602'
+    configuration: |
+      docker.scanImages=true
+      docker.includes=C7954602
+      docker.pull.enable=true
 #- task: WhiteSource@21
 #  inputs:
 #    cwd: '$(System.DefaultWorkingDirectory)'
