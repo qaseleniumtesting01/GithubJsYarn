@@ -4,14 +4,14 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- master
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: eho Hi World
-  displayName: 'Hi World'
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker Hub'
