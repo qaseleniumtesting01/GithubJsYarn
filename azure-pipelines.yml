@@ -25,9 +25,9 @@ steps:
     cwd: '$(System.DefaultWorkingDirectory)'
     projectName: 'Docker_IMAGE_C7954602'
     configuration: |
+      scanPackageManager=true
       docker.scanImages=true
       docker.includes=C7954602
-      docker.pull.enable=true
 #- task: WhiteSource@21
 #  inputs:
 #    cwd: '$(System.DefaultWorkingDirectory)'
