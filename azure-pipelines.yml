@@ -22,4 +22,4 @@ steps:
     configuration: |
       npm.yarnProject=true
       npm.runPreStep=true
-    scanReportTimeout: '0.2'
+    scanReportTimeout: '0.01'
