@@ -12,7 +12,7 @@ pool: Salih_Laptop
 #  vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: echo %JAVA_HOME%
   displayName: 'Run a one-line script'
 
 - task: WhiteSource@21
