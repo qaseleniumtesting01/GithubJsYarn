@@ -4,15 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- main
 
-pool: Salih_Laptop
-
-#pool:
-#  vmImage: ubuntu-latest
+pool:
+  vmImage: ubuntu-latest
 
 steps:
-- script: echo %JAVA_HOME%
+- script: echo Hello, world!
   displayName: 'Run a one-line script'
 
 - task: WhiteSource@21
@@ -22,4 +20,3 @@ steps:
     configuration: |
       npm.yarnProject=true
       npm.runPreStep=true
-    scanReportTimeout: '5'
