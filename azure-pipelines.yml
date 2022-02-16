@@ -17,4 +17,4 @@ steps:
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
     projectName: 'GithubJsYarnSanity'
-    scanReportTimeout: '0.01'
+    scanReportTimeout: '11'
